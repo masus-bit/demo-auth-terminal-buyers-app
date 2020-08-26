@@ -1,3 +1,4 @@
+
 body {
   margin: 0 auto;
   padding: 0 auto;
@@ -8,11 +9,48 @@ body {
 }
 .user-page__content,
 .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
   min-height: 100vh;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom, right top,
+    from(rgb(101, 115, 255)),
+    color-stop(rgb(122, 113, 238)),
+    color-stop(rgb(143, 112, 220)),
+    color-stop(rgb(164, 110, 203)),
+    color-stop(rgb(185, 109, 185)),
+    color-stop(rgb(206, 107, 168)),
+    color-stop(rgb(196, 113, 164)),
+    color-stop(rgb(185, 119, 160)),
+    color-stop(rgb(175, 125, 156)),
+    color-stop(rgb(164, 131, 151)),
+    color-stop(rgb(154, 137, 147)),
+    to(rgb(143, 143, 143))
+  );
+  background-image: -o-linear-gradient(
+    bottom left,
+    rgb(101, 115, 255),
+    rgb(122, 113, 238),
+    rgb(143, 112, 220),
+    rgb(164, 110, 203),
+    rgb(185, 109, 185),
+    rgb(206, 107, 168),
+    rgb(196, 113, 164),
+    rgb(185, 119, 160),
+    rgb(175, 125, 156),
+    rgb(164, 131, 151),
+    rgb(154, 137, 147),
+    rgb(143, 143, 143)
+  );
   background-image: linear-gradient(
     to top right,
     rgb(101, 115, 255),
@@ -43,18 +81,32 @@ body {
   min-height: 100%;
   padding: 30px;
   background: rgb(248, 202, 231);
-  box-shadow: 0px 10px 20px black;
+  -webkit-box-shadow: 0px 10px 20px black;
+          box-shadow: 0px 10px 20px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .sign-in__title {
   font-family: "Oxygen", sans-serif;
 }
 .sign-in__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 30px;
 }
 .sign-in__label {
@@ -101,11 +153,14 @@ body {
   font-size: large;
   font-weight: bold;
   border-radius: 20px;
-  box-shadow: 0 0 3px black;
+  -webkit-box-shadow: 0 0 3px black;
+          box-shadow: 0 0 3px black;
 }
 .sign-in__btn:hover {
   width: 770px;
   height: 40px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -123,7 +178,8 @@ body {
   font-size: small;
   font-weight: bold;
   border-radius: 20px;
-  box-shadow: 0 0 3px black;
+  -webkit-box-shadow: 0 0 3px black;
+          box-shadow: 0 0 3px black;
   cursor: pointer;
 }
 .save-btn {
@@ -134,16 +190,25 @@ body {
 }
 .delete-btn:hover,
 .save-btn:hover {
-  box-shadow: 0 0 10px black;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 .delete-btn {
   background-color: black;
 }
 .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   width: 100%;
   min-height: 100vh;
@@ -154,14 +219,25 @@ body {
   border-radius: 0 20px 20px 0;
   width: 200px;
   height: 90vh;
-  box-shadow: 0px 10px 20px black;
+  -webkit-box-shadow: 0px 10px 20px black;
+          box-shadow: 0px 10px 20px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .user-avatar {
-  box-shadow: 0px 0px 5px black;
+  -webkit-box-shadow: 0px 0px 5px black;
+          box-shadow: 0px 0px 5px black;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -169,15 +245,28 @@ body {
 .content {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .add-terminal {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .terminals--link,
 .buyers--link {
@@ -187,27 +276,46 @@ body {
   width: 100px;
   height: 40px;
   border-radius: 20px;
-  box-shadow: 0 0 10px black;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 20px;
 }
 .terminals--link:hover,
 .buyers--link:hover {
-  box-shadow: 0 0 30px black;
+  -webkit-box-shadow: 0 0 30px black;
+          box-shadow: 0 0 30px black;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   text-decoration: none;
   color: black;
 }
 
 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .buyer--check-title,
 .buyer--capacity-title,
@@ -221,50 +329,91 @@ body {
 .buyer--capacity-title:hover,
 .buyer--total-title:hover {
   color: gray !important;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 .pagination--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .pagination-change--section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 100%;
 }
 .pagination--text {
   margin-right: -30px;
 }
 .pagination-change--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 150px;
 }
 .pagination-change--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 20px;
   height: 20px;
   border-radius: 5px;
 }
 .pagination-change--item:hover {
-  box-shadow: 0 0 5px;
+  -webkit-box-shadow: 0 0 5px;
+          box-shadow: 0 0 5px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .pagination--section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .pagination--link-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .pagination--link {
   margin-left: 20px;
@@ -274,7 +423,10 @@ body {
   text-align: center;
 }
 .pagination--link:hover {
-  box-shadow: 0 0 10px;
+  -webkit-box-shadow: 0 0 10px;
+          box-shadow: 0 0 10px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .buyer-item {
@@ -286,20 +438,30 @@ body {
 
 @media (max-width: 900px) {
   .main {
-    flex-direction: column;
-    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .sidebar {
     position: relative;
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
     margin-top: -220px;
   }
   .terminals--link,
   .buyers--link {
-    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
     margin-top: 60px;
   }
   .user-avatar {
-    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
   }
 }

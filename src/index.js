@@ -6,7 +6,6 @@ import thunk from "redux-thunk";
 import { createApi } from "./api.js";
 import { reducer } from "./components/reducers/reducer.js";
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
 import { compose } from "recompose";
 
 const api = createApi((...args) => store.dispatch(...args));
@@ -23,9 +22,7 @@ export const store = createStore(
 const init = () => {
   ReactDOM.render(
     <Provider store={store}>
-      <BrowserRouter>
         <App />
-      </BrowserRouter>
     </Provider>,
     document.querySelector(`#root`)
   );

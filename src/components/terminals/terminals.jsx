@@ -7,10 +7,8 @@ const Terminals = React.memo((props) => {
   const { isAuth, terminals, onSaveClick, onDeleteClick } = props;
   const [terminalsCount, setTerminals] = useState(0);
 
-  return isAuth === false ? (
-    <Redirect to="/"></Redirect>
-  ) : (
-    <Fragment>
+  return (
+
       <div className="terminals--board">
         <table className="terminals table table-sm table-striped">
           <caption className="terminals--title">Терминалы</caption>
@@ -65,7 +63,7 @@ const Terminals = React.memo((props) => {
           </button>
         </form>
       </div>
-    </Fragment>
+
   );
 });
 const mapStateToProps = (state) => {

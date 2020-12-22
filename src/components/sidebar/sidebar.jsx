@@ -1,18 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export const Sidebar = (props) => {
-  const { userPhoto } = props;
+  const { userPhoto, setMode } = props;
   return (
     <aside className="sidebar">
       <img src={userPhoto} alt="" className="user-avatar" />
       <nav className="menu">
-        <Link to="/terminals" className="terminals--link">
+        <a className="terminals--link" onClick={()=>setMode("terminals")}>
           Терминалы <br />
-        </Link>
-        <Link to="/buyers" className="buyers--link">
+        </a>
+        <a className="buyers--link" onClick={()=>setMode("buyers")}>
           Покупатели
-        </Link>
+        </a>
       </nav>
       <footer className="copyright">Copyright © 2020</footer>
     </aside>

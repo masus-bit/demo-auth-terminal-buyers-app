@@ -1,15 +1,14 @@
 import React, { Fragment } from "react";
 import { Operations } from "../reducers/reducer.js";
-import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-
+import Main from '../main/main.jsx'
 const AuthForm = (props) => {
   const { isAuth, userPhoto, submitHandler } = props;
 
   return isAuth === true ? (
-    <Redirect to={{ pathname: "/main", state: userPhoto }}></Redirect>
+    <Main />
   ) : (
-    <Fragment>
+ 
       <div className="sign-in user-page__content">
         <form
           action="#"
@@ -55,7 +54,7 @@ const AuthForm = (props) => {
           </div>
         </form>
       </div>
-    </Fragment>
+
   );
 };
 const mapStateToProps = (state, ownProps) => {

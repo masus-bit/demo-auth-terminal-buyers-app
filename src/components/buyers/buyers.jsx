@@ -3,8 +3,7 @@ import { connect } from "react-redux";
 import Buyer from "./buyer.jsx";
 import { ActionCreator } from "../reducers/action-creator.js";
 import { splitData } from "../utils/utils.js";
-import { Switch, Route } from "react-router-dom";
-import { BuyerPage } from "../buyer-page/buyer-page.jsx";
+
 
 const Buyers = React.memo((props) => {
   const {
@@ -29,8 +28,8 @@ const Buyers = React.memo((props) => {
       return buyers;
     }
   };
-  return matchUrl === false ? (
-    <Fragment>
+  return (
+    
       <div className="buyers-board">
         <input
           type="text"
@@ -88,7 +87,7 @@ const Buyers = React.memo((props) => {
               ? splitData(typeOfData())[pageCount - 1].map((item) => {
                   return (
                     <Buyer
-                      setMatchUrl={setMatchUrl}
+                      
                       match={match}
                       key={item.id}
                       buyer={item}
@@ -113,7 +112,7 @@ const Buyers = React.memo((props) => {
               : typeOfData().map((item) => {
                   return (
                     <Buyer
-                      setMatchUrl={setMatchUrl}
+                      
                       match={match}
                       key={item.id}
                       buyer={item}
@@ -177,13 +176,8 @@ const Buyers = React.memo((props) => {
           </div>
         </div>
       </div>
-    </Fragment>
-  ) : (
-    <Route
-      path={`${match.url}/:id`}
-      component={(props) => <BuyerPage {...props} />}
-    />
-  );
+    )
+  
 });
 
 const mapStateToProps = (state) => {

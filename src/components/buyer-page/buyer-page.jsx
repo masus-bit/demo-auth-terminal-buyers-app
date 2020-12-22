@@ -4,7 +4,7 @@ export const BuyerPage = (props) => {
   const buyer = props.location.state;
 
   return (
-    <Fragment>
+    
       <div className="buyers-board">
         <table className="buyers-table table table-sm table-striped">
           <caption className="buyers--title caption">{buyer.name}</caption>
@@ -27,6 +27,6 @@ export const BuyerPage = (props) => {
           </thead>
         </table>
       </div>
-    </Fragment>
+
   );
 };
